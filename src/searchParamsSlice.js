@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const searchParamsSlice = createSlice({
+export const searchParamsSlice = createSlice({
   name: "searchParams",
   initialState: {
     value: {
@@ -10,11 +10,12 @@ const searchParamsSlice = createSlice({
     },
   },
   reducers: {
-    all(state, action) {
+    all: (state, action) => {
       state.value = action.payload;
     },
   },
 });
 
 export const { all } = searchParamsSlice.actions;
+
 export default searchParamsSlice.reducer;
